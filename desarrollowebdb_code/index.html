@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/css">
+        body{
+            font-family: Arial;
+            box-sizing: border-box;
+            background-color: black;
+        }
+        .login {
+            width: 400px;
+            background-color: #ffffff;
+            box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+            margin: 100px auto;
+        }
+        .login h1{
+            text-align: center;
+            color: #254068;
+            font-size: 30px;
+            padding: 20px 0 20px 0;
+            border-bottom: 1px solid #dee0e4;
+        }
+        .login form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-top: 20px;
+        }
+        .login form label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            background-color: darkblue;
+            color: #ffffff;
+        }
+        .login form input[type="text"], .login form input[type="password"] {
+        width: 310px;
+        height: 50px;
+        border: 1px solid #dee0e4;
+        margin-bottom: 20px;
+        padding: 0 15px;
+        }
+        .login form button[type="submit"] {
+        width: 100%;
+        padding: 15px;
+        margin-top: 20px;
+        background-color: darkblue;
+        border: 0;
+        cursor: pointer;
+        font-weight: bold;
+        color: #ffffff;
+        transition: background-color 0.2s;
+        }
+        .login form button[type="submit"]:hover {
+        background-color: rgba(0, 0, 139, 0.900);
+        transition: background-color 0.2s;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="login">
+        <h1>Iniciar Sesión</h1>
+
+        <form action="autenticacion.php" method="post">
+            <label for="usuario">
+                <i class="fas fa-user"></i>
+            </label>
+            <input type="text" name="usuario" placeholder="Usuario" id="usuario" required>
+
+            <label for="clave">
+                <i class="fas fa-lock"></i>
+            </label>
+            <input type="password" name="clave" placeholder="Contraseña"
+             id="clave" required>
+
+             <button type="submit">Acceder</button>
+        </form>
+    </div>
+    
+</body>
+</html>
